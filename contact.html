@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Sagar Bellikatti</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">Sagar</div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+       
+      </nav>
+    </div>
+  </header>
+
+
+  
+<section id="contact" class="contact container">
+  <h1>Contact Me</h1>
+
+  <form id="contact-form" action="#" method="post">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+
+  <!-- ✅ Message shown after form submission -->
+  <p id="form-message" style="display: none; color: rgb(239, 31, 7); margin-top: 10px;" text-align: center;>
+    Your message is being sent...
+  </p>
+</section>
+
+<!-- ✅ JavaScript to show the message -->
+<script>
+  const form = document.getElementById("contact-form");
+  const message = document.getElementById("form-message");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent actual form submission
+    message.style.display = "block"; // show the message
+
+    // Optional: simulate sending process (e.g., for demo)
+    setTimeout(() => {
+      message.textContent = "Your message has been sent successfully!";
+    }, 2000);
+  });
+</script>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; Sagar Bellikatti. All rights reserved.</p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/sagar-bellikatti-18495b2ab" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Sagarbellikatti777" target="_blank">GitHub</a>
+        
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
